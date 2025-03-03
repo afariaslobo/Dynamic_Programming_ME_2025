@@ -224,8 +224,7 @@ saveas(2,'Figuras/Figura_P3.jpeg')
 
 % De todas maneras, es posible analizar una fracción de las soluciones
 % obtenidas para entregarle una interpretación económica. Para ello,
-% obtenemos la fracción de los casos donde el perfil es creciente en sigma
-% (como sugeriría una solución analítica) y el perfil es menor a 1:
+% obtenemos la fracción de los casos donde sigma es menor o igual a 7:
 
 figure(3)
 plot(sigma_grid(sigma_grid <= 7),perfil(sigma_grid <= 7), '-', ...
@@ -234,4 +233,10 @@ xlabel('$\sigma$', Interpreter='latex');
 ylabel('$c_2/c_1$', Interpreter='latex');
 title('Perfil de consumo', Interpreter='latex'); 
 subtitle('para diferentes valores de $\sigma$', Interpreter='latex');
+
+% Es posible ver cómo a medida que aumenta sigma, el perfil de consumo se
+% hace más plano (más cercano a uno). Ello de debe a que la elasticidad de
+% sustitución intertemporal está dada por 1/sigma, llevando a que a mayor
+% sigma, la elasticidad de sustitución entre c_1 y c_2 sea menor y, por
+% tanto, pese a que beta(1+r) < 1, el perfil c_2/c_1 sea más cercano a uno.
 
